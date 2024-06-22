@@ -1,14 +1,9 @@
 import pandas as pd 
-import numpy as np 
-import pickle 
 import streamlit as st 
-from PIL import Image 
-  
-# Loading the model to predict on the data 
-pickle_in = open('Save Model/classifier_iris.pkl', 'rb') 
-classifier = pickle.load(pickle_in) 
 
-  
+
+  # Loading the model to predict on the data using pandas
+classifier = pd.read_pickle('Save Model/classifier_iris.pkl')
 
 def prediction(sepal_length, sepal_width, petal_length, petal_width):   
    
